@@ -1,0 +1,100 @@
+:root {
+    --bg-color: #ffffff;
+    --text-color: #443f3f;
+    --switch-bg: #e0e0e0;
+    --accent-color: #4caf50;
+    --border-color: #d0d0d0;
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --bg-color: #121212;
+        --text-color: #f0f0f0;
+        --switch-bg: #333333;
+        --accent-color: #81c784;
+        --border-color: #444444;
+    }
+}
+
+html {
+    font-size: 20px;
+}
+
+body {
+    background-color: var(--bg-color);
+}
+
+#root {
+    min-width: 200px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.switch-input {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    position: relative;
+
+    * {
+        pointer-events: none;
+    }
+
+    input {
+        width: 0;
+        height: 0;
+        display: none;
+    }
+
+    input:checked + .icon::before {
+        background-color: var(--accent-color);
+        left: calc(100% - 0.9rem - 3px);
+    }
+
+    input:checked + .icon::after {
+        background-color: var(--switch-bg);
+    }
+
+    .icon {
+        position: relative;
+        left: 0;
+        border: 2px solid gray;
+        padding: 3px;
+        border-radius: 1.75rem;
+        width: 2.5rem;
+        height: 0.9rem;
+        text-align: start;
+        flex-shrink: 0;
+
+        &::before {
+            content: "";
+            position: absolute;
+            left: 3px;
+            top: 3px;
+            height: calc(100% - 6px);
+            width: 0.9rem;
+            border-radius: 50%;
+            background-color: gray;
+            z-index: 2;
+            transition: all 0.3s ease-out;
+        }
+
+        &::after {
+            content: "";
+            position: absolute;
+            width: calc(100% - 6px);
+            height: calc(100% - 6px);
+            background-color: transparent;
+            border-radius: inherit;
+            transition: background 0.5s linear;
+        }
+    }
+
+    label {
+        font-size: 1rem;
+        text-transform: capitalize;
+        color: var(--text-color);
+    }
+}
