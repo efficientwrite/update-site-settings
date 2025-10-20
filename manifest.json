@@ -6,7 +6,8 @@
   "permissions": ["contentSettings", "activeTab", "declarativeContent"],
   "background": { "service_worker": "serviceWorker.js" },
   "action": {
-    "default_popup": "./popup/popup.html"
+    "default_popup": "popup/popup.html",
+    "default_icon": "assets/icon64.png"
   },
   "incognito": "split",
   "icons": {
