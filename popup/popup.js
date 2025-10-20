@@ -19,7 +19,7 @@ function renderPermissions() {
   permissions.forEach((permission) => {
     const permissionValue = permission.value;
     chrome.contentSettings[permissionValue]
-      .get({ primaryUrl: currentTabOrigin })
+      ?.get({ primaryUrl: currentTabOrigin })
       .then((properties) => {
         const enabled = properties.setting === "allow";
         const switchElement = document.createElement("div");
