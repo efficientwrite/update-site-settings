@@ -1,6 +1,6 @@
 {
   "manifest_version": 3,
-  "version": "1.0.0",
+  "version": "1.0.1",
   "name": "Update Site settings",
   "description": "Set site settings per domain on mobile easily",
   "permissions": ["contentSettings", "activeTab", "declarativeContent"],
