@@ -11,5 +11,6 @@ Update the following settings per domain
 - Popups
 - Clipboard
 - Images
+- Sound (available from Chromium 141+)
 
 This extension primarily designed for Microsoft Edge Mobile where updating the permissions per domain from site info in URL bar is not possible.

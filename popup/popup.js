@@ -8,7 +8,7 @@ const permissions = [
   { label: "Popups", value: "popups" },
   { label: "Clipboard", value: "clipboard" },
   { label: "Images", value: "images" },
-  // { label: "Sound", value: "sound" },
+  { label: "Sound", value: "sound" },
 ];
 
 let currentTabOrigin = "";
