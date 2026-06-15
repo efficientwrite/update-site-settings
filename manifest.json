@@ -3,7 +3,7 @@
   "version": "1.2.0",
   "name": "Update Site settings",
   "description": "Set site settings per domain on mobile easily",
-  "permissions": ["contentSettings", "activeTab", "declarativeContent"],
+  "permissions": ["contentSettings", "activeTab"],
   "background": { "service_worker": "serviceWorker.js" },
   "action": {
     "default_popup": "popup/popup.html",
